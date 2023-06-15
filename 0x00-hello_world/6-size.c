@@ -6,13 +6,24 @@
  */
 int main(void)
 {
-	printf("Size of a char: %zu byte(s)\n", sizeof(char));
-	printf("Size of an int: %zu byte(s)\n", sizeof(int));
-	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
-	printf("Size of a float: %zu byte(s)\n", sizeof(float));
-	printf("Size of a uint32_t: %zu byte(s)\n", sizeof(uint32_t));
-	printf("Size of a uint64_t: %zu byte(s)", sizeof(uint64_t));
+	if (sizeof(void *) == 4)
+	{
+		printf("Running on a 32-bit machine\n");
+		printf("Size of a pointer: %zu byte(s)\n", sizeof(void *));
+		printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
+		printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
+	}
+	else if (sizeof(void *) == 8)
+	{
+		printf("Running on a 64-bit machine\n");
+		printf("Size of a pointer: %zu byte(s)\n", sizeof(void *));
+		printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
+		printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
+	}
+	else
+	{
+		printf("Unknown machine architecture\n");
+	}
 
 	return (0);
 }
