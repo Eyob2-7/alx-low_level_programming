@@ -7,13 +7,10 @@
  */
 int main(void)
 {
-	char letter;
+	int digit;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		if (letter != 'q' && letter != 'e')
-			putchar(letter);
-	}
+	for (digit = 0; digit <= 9; digit++)
+		putchar(digit + '0');
 
 	putchar('\n');
 
