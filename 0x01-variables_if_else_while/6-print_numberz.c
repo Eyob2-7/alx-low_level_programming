@@ -3,11 +3,15 @@
 /**
  * main - Entry point of the program
  *
- * Return: 0 if successful
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	putchar('0');
+	int i;
+
+	for (i = 0; i < 10; i++)
+		putchar(i + '0');
+
 	putchar('\n');
 
 	return (0);
