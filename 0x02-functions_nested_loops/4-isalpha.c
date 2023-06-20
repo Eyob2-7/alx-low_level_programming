@@ -1,10 +1,10 @@
 #include "main.h"
+
 /**
- * _isalpha -Shows 1 if the input is a letter
- *Another cases,shows 0
- * @c: The character in ASCII code
+ * _isalpha - Checks if a character is an alphabetic character.
+ * @c: The character to be checked.
  *
- * Return: 1 for lettera, 0 otherwise.
+ * Return: 1 if c is an alphabetic character, 0 otherwise.
  */
 int _isalpha(int c)
 {
@@ -16,5 +16,4 @@ int _isalpha(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 }
