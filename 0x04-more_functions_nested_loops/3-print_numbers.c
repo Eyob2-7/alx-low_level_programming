@@ -1,17 +1,16 @@
-#include <unistd.h>
+#include "main.h"
 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
+/**
+ * print_numbers - Prints the numbers from 0 to 9, followed by a new line.
+ */
 void print_numbers(void)
 {
+	char digits[] = "0123456789";
 	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		_putchar(i + '0');
+		_putchar(digits[i]);
 	}
 
 	_putchar('\n');
