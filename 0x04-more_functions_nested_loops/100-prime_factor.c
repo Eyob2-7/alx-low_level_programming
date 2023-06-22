@@ -12,6 +12,9 @@ long largest_prime_factor(long n)
 	long largest_factor = -1;
 	long i;
 
+	if (n <= 1)
+		return (largest_factor);
+
 	while (n % 2 == 0)
 	{
 		largest_factor = 2;
