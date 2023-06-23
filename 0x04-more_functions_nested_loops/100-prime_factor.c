@@ -37,7 +37,15 @@ int main(void)
 	long number = 612852475143;
 	long result = largest_prime_factor(number);
 
-	printf("%ld\n", result);
+	putchar(result / 10000000 + '0');
+	putchar(result / 1000000 % 10 + '0');
+	putchar(result / 100000 % 10 + '0');
+	putchar(result / 10000 % 10 + '0');
+	putchar(result / 1000 % 10 + '0');
+	putchar(result / 100 % 10 + '0');
+	putchar(result / 10 % 10 + '0');
+	putchar(result % 10 + '0');
+	putchar('\n');
 
 	return (0);
 }
