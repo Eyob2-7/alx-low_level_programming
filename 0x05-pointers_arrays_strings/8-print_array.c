@@ -1,12 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-/**
- * print_array - print the n elements of an array.
- * @a: tested array
- * @n: number of elements
- * Return: always 0.
- */
 void print_array(int *a, int n)
 {
 	int i, last;
@@ -16,7 +10,7 @@ void print_array(int *a, int n)
 	for (i = 0; i <= last; i++)
 	{
 		printf("%d", *(a + i));
-		if (i < (n - 1))
+		if (i < last)
 		{
 			printf(", ");
 		}
@@ -25,4 +19,17 @@ void print_array(int *a, int n)
 			printf("\n");
 		}
 	}
+}
+
+int main(void)
+{
+	int array[1] = {98};
+
+	printf("Array with 0 elements:\n");
+	print_array(array, 0);
+
+	printf("Array with negative length:\n");
+	print_array(array, -1);
+
+	return (0);
 }
