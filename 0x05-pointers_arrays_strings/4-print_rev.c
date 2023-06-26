@@ -1,8 +1,8 @@
 #include "main.h"
+
 /**
- * print_rev - prints in reverse a string.
- * @s: tested string
- * Return: always 0.
+ * print_rev - Prints a string in reverse.
+ * @s: Pointer to a string.
  */
 void print_rev(char *s)
 {
@@ -16,8 +16,8 @@ void print_rev(char *s)
 	}
 	while (i > 0)
 	{
-		_putchar(*(s + i));
 		i--;
+		_putchar(*(s + i));
 	}
 	_putchar('\n');
 }
